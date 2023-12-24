@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --toggle-switch-bg: #232428;
+  --toggle-border: #232428;
+  --toggle-bg: #fff;
+}
+body {
+  overflow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  background: gray;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 93px;
+  height: 50px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle-switch {
+  border: 3px solid var(--toggle-border);
+  border-radius: 50px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-bg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.toggle-switch:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 42px;
+  width: 42px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--toggle-switch-bg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .toggle-switch:before {
+  -webkit-transform: translateX(42px);
+  -ms-transform: translateX(42px);
+  transform: translateX(42px);
+}
