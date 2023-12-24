@@ -1,0 +1,123 @@
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--dark-green);
+  background-color: var(--snow);
+}
+
+h1 {
+  position: relative;
+  color: var(--dark-green);
+  top: 40px;
+}
+
+.container,
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  margin: 0 1em 1em;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-evenly; /* Distribute items evenly */
+  width: 200px;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  color: var(--snow);
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.nice-list {
+  background: var(--dark-green);
+}
+
+.naughty-list {
+  background: var(--wine-red);
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+  font-size: 1.2rem;
+  background-color: var(--gold);
+  color: var(--dark-green);
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.add {
+  position: relative;
+  bottom: 60px;
+  left: 0px;
+}
+
+#btn {
+  position: relative;
+  right: 180px;
+}
+
+.name {
+  position: relative;
+  bottom: 120px;
+  left: 200px;
+}
+
+.kid {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#good_not {
+  position: relative;
+  bottom: 130px;
+  left: 160px;
+}
+
+#good {
+  position: relative;
+  bottom: 115px;
+  left: 200px;
+}
+
+.switch-button {
+  height: 30px;
+  width: 100px;
+  border-radius: 0;
+  text-align: center; /* Center the text within the button */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
