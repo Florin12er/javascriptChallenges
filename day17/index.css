@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-word: #5134ff;
+}
+body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  margin-left: 50px;
+}
+
+@keyframes progress {
+  0% {
+    content: "";
+  }
+  20% {
+    content: "coding";
+  }
+  40% {
+    content: "exercise";
+  }
+  60% {
+    content: "reading";
+  }
+  80% {
+    content: "girls";
+  }
+  100% {
+    content: "water";
+  }
+}
+
+.loved_things {
+  color: black;
+  font-size: 2rem;
+  position: relative;
+}
+
+.loved_things::after {
+  position: relative;
+  bottom: 70px;
+  left: 90px;
+  width: fit-content;
+  height: 60px;
+  display: grid;
+  align-content: center;
+  content: "";
+  color: white;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #3498db, #e74c3c);
+  animation: progress 7s infinite;
+  padding: 0 10px;
+}
