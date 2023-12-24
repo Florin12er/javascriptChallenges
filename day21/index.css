@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --search-border: #bbb;
+  --search-focus-border: #3a71ca;
+}
+
+input {
+  width: 66px;
+}
+
+input:focus {
+  border: 3px solid var(--search-focus-border);
+  transition: width 2s ease;
+  width: 200px;
+}
+
+label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button:focus {
+  outline: none;
+}
